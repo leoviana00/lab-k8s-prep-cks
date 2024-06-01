@@ -7,3 +7,6 @@ site.retry
 # vagrant
 *.vagrant
 **/.vagrant
+# keys
+**/key.pub
+**/key
