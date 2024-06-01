@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app03-deployment
+  namespace: app-dev
+  labels:
+    app: app03
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app03
+  template:
+    metadata:
+      labels:
+        app: app03
+    spec:
+      containers:
+        - name: app03
+          image: mouradev01/app03:v8
+          ports:
+            - containerPort: 3000
