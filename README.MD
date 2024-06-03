@@ -13,5 +13,5 @@
 </p>
 
 <p align="center">
-  <img alt="Monitoring" src="data/cks.png">
+  <img alt="CKS" src="data/cks.png">
 </p>
