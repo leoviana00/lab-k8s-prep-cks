@@ -10,3 +10,6 @@ site.retry
 # keys
 **/key.pub
 **/key
+
+# Config Setup Kubeadm
+**/setup-kubeadm/configs
