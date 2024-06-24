@@ -2,11 +2,20 @@
 site.retry
 *.retry
 **/.retry
+
 # Editor
 .vscode
+
 # vagrant
 *.vagrant
 **/.vagrant
+
+# Setup All in One
+**/setup-all-in-one/.data
+**/setup-all-in-one/.kube
+**/setup-all-in-one/apps
+**/setup-all-in-one/.ssh
+
 # keys
 **/key.pub
 **/key

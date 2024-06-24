@@ -25,6 +25,58 @@ Subir um Cluster simples utilizando vagrant com virtual box.
 - Virtualbox
 - Kubernetes
 
+## Virtualbox config
+
+A versão mais recente do Virtualbox para Mac/Linux pode causar problemas.
+
+Crie/edite o arquivo /etc/vbox/networks.conf e adicione o seguinte para evitar problemas relacionados à rede.
+
+```console
+* 0.0.0.0/0 ::/0
+```
+
+ou execute os comandos abaixo
+
+```console
+sudo mkdir -p /etc/vbox/
+echo "* 0.0.0.0/0 ::/0" | sudo tee -a /etc/vbox/networks.conf
+```
+
+## Definir variável para o Kubeconfig
+
+```console
+cd configs
+export KUBECONFIG=$(pwd)/config
+```
+
+ou você pode copiar o arquivo de configuração para o diretório .kube.
+
+```console
+cp config ~/.kube/
+```
+
+## Vagrant comandos
+
+- Parar o cluster
+```console
+vagrant halt
+```
+
+- Iniciar ou reiniciar o cluster
+```console
+vagrant init
+```
+
+- Destruir o cluster
+```console
+vagrant destroy -f
+```
+
+- Acessar o controlplane
+```console
+vagrant ssh master
+```
+
 ## 👣 Roadmap
 
 - [x] [Criar um arquivo principal com as principais configurações a ser utilizada pelo `Vagrantfile`](config.yaml)
