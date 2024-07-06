@@ -18,4 +18,9 @@
 
 ## Roadmap
 
-- TODO
+- [ ] [Cluster Setup] ![](https://geps.dev/progress/25)
+- [ ] Cluster Hardening
+- [ ] Minimize Microsservice Vulnerabilities
+- [ ] System Hardening
+- [ ] Supply Chain Security
+- [ ] Monitoring, Logging and Runtime Security 
