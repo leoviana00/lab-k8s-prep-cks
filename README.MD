@@ -27,4 +27,4 @@
 | Supply Chain Security | ![](https://geps.dev/progress/0) |
 | Monitoring, Logging and Runtime Security | ![](https://geps.dev/progress/0) |
 
-https://progress-bar.dev/25/?title=ClusterSetup 
+![](https://progress-bar.dev/25/?title=ClusterSetup) 
