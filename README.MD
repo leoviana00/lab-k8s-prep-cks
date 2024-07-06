@@ -26,3 +26,10 @@
 | System Hardening | ![](https://geps.dev/progress/0) |
 | Supply Chain Security | ![](https://geps.dev/progress/0) |
 | Monitoring, Logging and Runtime Security | ![](https://geps.dev/progress/0) |
+
+https://progress-bar.dev/25/?title=ClusterSetup 
+https://progress-bar.dev/0/?title=ClusterHardening
+https://progress-bar.dev/0/?title=MinimizeMicrosserviceVulnerabilities
+https://progress-bar.dev/0/?title=SystemHardening
+https://progress-bar.dev/0/?title=SupplyChainSecurity 
+https://progress-bar.dev/0/?title=MonitoringLoggingandRuntimeSecurity
