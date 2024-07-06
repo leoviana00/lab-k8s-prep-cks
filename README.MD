@@ -18,7 +18,4 @@
 
 ## Roadmap
 
-- [ ] Preparação para instalação
-  - [ ] A segurança do contêiner deve incluir uma compreensão do que o contêiner deve fazer, se contém vulnerabilidades conhecidas ou quando há uma nova versão oficial.
-  - [ ] [Grafeas.io](https://grafeas.io/) - Armazena metadados estruturados sobre um objeto de forma flexível e fácil de consultar. O estado e as informações sobre os contêineres são mantidos em uma nota.
-  - [ ] Tempo de execução do contêiner 
+- TODO
