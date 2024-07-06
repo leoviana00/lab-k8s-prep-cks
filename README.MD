@@ -18,9 +18,11 @@
 
 ## Roadmap
 
-- [ ] [Cluster Setup] ![](https://geps.dev/progress/25)
-- [ ] Cluster Hardening
-- [ ] Minimize Microsservice Vulnerabilities
-- [ ] System Hardening
-- [ ] Supply Chain Security
-- [ ] Monitoring, Logging and Runtime Security 
+| Tema | Progresso |
+|---|---|
+| Cluster Setup | ![](https://geps.dev/progress/25) |
+| Cluster Hardening | ![](https://geps.dev/progress/0) |
+| Minimize Microsservice Vulnerabilities | ![](https://geps.dev/progress/0) |
+| System Hardening | ![](https://geps.dev/progress/0) |
+| Supply Chain Security | ![](https://geps.dev/progress/0) |
+| Monitoring, Logging and Runtime Security | ![](https://geps.dev/progress/0) |
