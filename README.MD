@@ -35,3 +35,15 @@
 | ![](https://progress-bar.dev/0/?title=SystemHardening) |
 | ![](https://progress-bar.dev/0/?title=SupplyChainSecurity) |
 | ![](https://progress-bar.dev/0/?title=MonitoringLoggingandRuntimeSecurity) |
+
+
+## 📄 Referências
+
+- A certificação CKA (não expirada) é necessária para fazer este exame:
+
+- [Certified Kubernetes Security Specialist (CKS):](https://www.cncf.io/training/certification/cks/)
+- [Exam Curriculum (Topics):](https://github.com/cncf/curriculum)
+- [Candidate Handbook:](https://docs.linuxfoundation.org/tc-docs/certification/lf-handbook2)
+- [Exam Tips:](https://docs.linuxfoundation.org/tc-docs/certification/important-instructions-cks)
+- [Frequently asked questions for the CKS exam:](https://docs.linuxfoundation.org/tc-docs/certification/faq-cka-ckad-cks)
+- [Link para compra do exame](https://training.linuxfoundation.org/certification/certified-kubernetes-security-specialist/?cjdata=MXxOfDB8WXww&cjevent=e9b11da4752b11ef828888090a82b824&utm_source=CJ&utm_medium=affiliate)
