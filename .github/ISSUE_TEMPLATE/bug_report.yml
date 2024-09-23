@@ -4,6 +4,7 @@ title: "🐛 [BUG] - <title>"
 labels: [
   "bug"
 ]
+
 body:
   - type: textarea
     id: description
