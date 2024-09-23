@@ -1,40 +1,80 @@
-name: Bug Report
-description: Sugerir uma ideia para este projeto.
-title: "[Bug Report]: "
-labels: "bug :beetle:"
+name: "🐛 Bug Report"
+description: Create a new ticket for a bug.
+title: "🐛 [BUG] - <title>"
+labels: [
+  "bug"
+]
 body:
-- type: checkboxes
-  attributes:
-    label: Preflight Checklist
-    description: Certifique-se de ter concluído todos os itens a seguir.
-    options:
-      - label: Eu li [Contributing Guidelines](../../CONTRIBUTING.md) para esse projeto.
-        required: true
-      - label: Eu concordo em seguir o [Code of Conduct](../../CODE_OF_CONDUCT.md) que este projeto segue.
-        required: true
-      - label: Eu procurei o [issue tracker](https://github.com/leoviana00/lab-k8s-prep-cks/issues) para uma solicitação de recurso que corresponde àquela que desejo registrar, sem sucesso.
-        required: true
-- type: textarea
-  attributes:
-    label: Descrição do problema
-    description: Adicione uma descrição clara e concisa do problema que você deseja resolver com esta solicitação de recurso.
-  validations:
-    required: true
-- type: textarea
-  attributes:
-    label: Solução Proposta
-    description: Descreva a solução que você deseja de forma clara e concisa.
-  validations:
-    required: true
-- type: textarea
-  attributes:
-    label: Alternativas consideradas
-    description: Uma descrição clara e concisa de quaisquer soluções ou recursos alternativos que você considerou.
-  validations:
-    required: true
-- type: textarea
-  attributes:
-    label: Informações adicionais
-    description: Adicione qualquer outro contexto sobre o problema aqui.
-  validations:
-    required: false
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: Please enter an explicit description of your issue
+      placeholder: Short and explicit description of your incident...
+    validations:
+      required: true
+  - type: input
+    id: reprod-url
+    attributes:
+      label: "Reproduction URL"
+      description: Please enter your GitHub URL to provide a reproduction of the issue
+      placeholder: ex. https://github.com/USERNAME/REPO-NAME
+    validations:
+      required: true
+  - type: textarea
+    id: reprod
+    attributes:
+      label: "Reproduction steps"
+      description: Please enter an explicit description of your issue
+      value: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+      render: bash
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: "Screenshots"
+      description: If applicable, add screenshots to help explain your problem.
+      value: |
+        ![DESCRIPTION](LINK.png)
+      render: bash
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs"
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: bash
+    validations:
+      required: false
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: "Browsers"
+      description: What browsers are you seeing the problem on ?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+        - Opera
+    validations:
+      required: false
+  - type: dropdown
+    id: os
+    attributes:
+      label: "OS"
+      description: What is the impacted environment ?
+      multiple: true
+      options:
+        - Windows
+        - Linux
+        - Mac
+    validations:
+      required: false
