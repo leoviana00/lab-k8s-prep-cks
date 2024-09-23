@@ -9,47 +9,45 @@ body:
   - type: textarea
     id: description
     attributes:
-      label: "Description"
-      description: Please enter an explicit description of your issue
-      placeholder: Short and explicit description of your incident...
+      label: "Descrição"
+      description: Insira uma descrição explícita do seu problema
+      placeholder: Descrição curta e explícita do seu incidente...
     validations:
       required: true
   - type: input
     id: reprod-url
     attributes:
-      label: "Reproduction URL"
-      description: Please enter your GitHub URL to provide a reproduction of the issue
+      label: "URL de reprodução"
+      description: Insira seu URL do GitHub para fornecer uma reprodução do problema
       placeholder: ex. https://github.com/USERNAME/REPO-NAME
     validations:
       required: true
   - type: textarea
     id: reprod
     attributes:
-      label: "Reproduction steps"
-      description: Please enter an explicit description of your issue
+      label: "Etapas de reprodução"
+      description: Insira uma descrição explícita do seu problema
       value: |
-        1. Go to '...'
-        2. Click on '....'
-        3. Scroll down to '....'
-        4. See error
+        1. Vá para '....'
+        2. Clique em '....'
+        3. Role para baixo até '....'
+        4. Veja o erro
       render: bash
     validations:
       required: true
   - type: textarea
     id: screenshot
     attributes:
-      label: "Screenshots"
-      description: If applicable, add screenshots to help explain your problem.
-      value: |
-        ![DESCRIPTION](LINK.png)
-      render: bash
+      label: "Capturas de tela"
+      description: Se aplicável, adicione capturas de tela para ajudar a explicar seu problema.
+      placeholder: Adicione a captura de tela...
     validations:
       required: false
   - type: textarea
     id: logs
     attributes:
       label: "Logs"
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      description: Copie e cole qualquer saída de log relevante. Isso será formatado automaticamente em código, portanto, não há necessidade de crases.
       render: bash
     validations:
       required: false
@@ -57,7 +55,7 @@ body:
     id: browsers
     attributes:
       label: "Browsers"
-      description: What browsers are you seeing the problem on ?
+      description: Em quais navegadores você está vendo o problema?
       multiple: true
       options:
         - Firefox
@@ -71,7 +69,7 @@ body:
     id: os
     attributes:
       label: "OS"
-      description: What is the impacted environment ?
+      description: Qual é o ambiente impactado?
       multiple: true
       options:
         - Windows
@@ -79,3 +77,12 @@ body:
         - Mac
     validations:
       required: false
+  - type: dropdown
+    id: trabalhar
+    attributes:
+      label: "Trabalhar"
+      description: Você tem interesse em trabalhar nisso?
+      multiple: true
+      options:
+        - Sim
+        - Não

@@ -1,64 +1,49 @@
 name: "💡 Feature Request"
 description: Create a new ticket for a new feature request
-title: "💡 [REQUEST] - <title>"
+title: "💡 [SUGESTÃO] - <title>"
 
 labels: [
   "question"
 ]
 body:
-  - type: input
-    id: start_date
-    attributes:
-      label: "Start Date"
-      description: Start of development
-      placeholder: "month/day/year"
-    validations:
-      required: false
   - type: textarea
-    id: implementation_pr
+    id: resumo
     attributes:
-      label: "Implementation PR"
-      description: Pull request used
-      placeholder: "#Pull Request ID"
-    validations:
-      required: false
-  - type: textarea
-    id: reference_issues
-    attributes:
-      label: "Reference Issues"
-      description: Common issues
-      placeholder: "#Issues IDs"
-    validations:
-      required: false
-  - type: textarea
-    id: summary
-    attributes:
-      label: "Summary"
-      description: Provide a brief explanation of the feature
-      placeholder: Describe in a few lines your feature request
+      label: "Resumo"
+      description: Forneça uma breve explicação sobre a sugestão
+      placeholder: Sua sugestão está relacionada a um problema? Por favor descreva
     validations:
       required: true
   - type: textarea
-    id: basic_example
+    id: descricao
     attributes:
-      label: "Basic Example"
-      description: Indicate here some basic examples of your feature.
-      placeholder: A few specific words about your feature request.
+      label: "Descrição"
+      description: Descreva a solução que você deseja
+      placeholder: Uma descrição clara e concisa do que você deseja que aconteça.
     validations:
       required: true
   - type: textarea
-    id: drawbacks
+    id: alternativas
     attributes:
-      label: "Drawbacks"
-      description: What are the drawbacks/impacts of your feature request ?
-      placeholder: Identify the drawbacks and impacts while being neutral on your feature request
+      label: "Alternativas"
+      description: Descreva as alternativas que você considerou
+      placeholder: Uma descrição clara e concisa de quaisquer soluções ou recursos alternativos que você considerou.
     validations:
       required: true
   - type: textarea
-    id: unresolved_question
+    id: adicional
     attributes:
-      label: "Unresolved questions"
-      description: What questions still remain unresolved ?
-      placeholder: Identify any unresolved issues.
+      label: "Adicional"
+      description: Contexto adicional
+      placeholder: Adicione qualquer outro contexto ou capturas de tela sobre a solicitação de recurso aqui.
     validations:
       required: false
+  - type: dropdown
+    id: trabalhar
+    attributes:
+      label: "Trabalhar"
+      description: Você tem interesse em trabalhar nisso?
+      multiple: true
+      options:
+        - Sim
+        - Não
