@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: GitHub Community Support
+    url: https://github.com/leoviana00/lab-k8s-prep-cks/discussions
+    about: Por favor, pergunte e responda perguntas aqui.
+  - name: GitHub Security Bug Bounty
+    url: https://github.com/leoviana00/lab-k8s-prep-cks/blob/main/SECURITY.md
+    about: Para relate vulnerabilidades de segurança, lei aqui.
