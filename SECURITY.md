@@ -2,4 +2,4 @@
 
 ## Reporting a Vulnerability
 
-**2**
+**1**
