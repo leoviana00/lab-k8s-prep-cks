@@ -21,4 +21,4 @@ site.retry
 **/key
 
 # Config Setup Kubeadm
-**/setup-kubeadm/configs
+**/setup-kubeadm/configs/**
