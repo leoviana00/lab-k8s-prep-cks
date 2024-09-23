@@ -1,6 +1,6 @@
 ## Descrição
 
-Descrição da alteração que está sendo proposta.
+<!-- Descrição da alteração que está sendo proposta. -->
 
 ## Tipo de alteração
 
@@ -13,19 +13,23 @@ Descrição da alteração que está sendo proposta.
 
 - [ ] Minhas alterações não deletam partes do projeto
 - [ ] Minhas alterações não introduzem novos problemas
-- [ ] Meu pr está de acordo com o processo de git semântico documentado em: [Guia Git semântico](https://www.conventionalcommits.org/pt-br/v1.0.0-beta.4/)
-- [ ] [PR release notes](https://github.com/leoviana00/channgelog-cks/blob/main/README.md) descrevem a mudança de uma forma relevante para integrantes do projeto.
+- [ ] Minha contribuição está de acordo com o [Guia de Contribuição]
 
 ## Comentários adicionais
 
-Adicione aqui quaisquer comentários ou informações adicionais relevantes para o revisor.
+- [ ] Não possui relação com Issues
+- [ ] Vincular o pull request a uma issue usando palavra chave [Pull request vinculado a uma issue]
+
+<!--
+## Em casos de viculação do pr a uma issue, utilize o modelo de descrição abaixo:
+Closes #5
+Aqui estão todas as informações adicionais necessárias para o revisor, por exemplo, execute o Yarn antes de revisar.
+-->
 
 ## Screenshots
 
 | Before | After |
 | ------ | ----- |
-| Image  | Image |
+| N/A  | N/A |
 
-#### Release Notes
-
-Notes: <!-- Adicione uma descrição de uma linha para que as partes interessadas do projeto possam ler as notas de modificações. Exemplos e ajuda em casos especiais: https://github.com/leoviana00/channgelog-cks/blob/main/README.md#examples -->
+<!-- Caso quera adicionar alguma imagem, coloque representando o antes e depois substituindo "N/A">

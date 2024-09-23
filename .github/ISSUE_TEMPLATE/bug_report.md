@@ -14,33 +14,27 @@ body:
         required: true
       - label: Eu procurei o [issue tracker](https://github.com/leoviana00/lab-k8s-prep-cks/issues) para uma solicitação de recurso que corresponde àquela que desejo registrar, sem sucesso.
         required: true
-
-**Descreva o bug**
-Uma descrição clara e concisa do que é o bug.
-
-**Reproduzir**
-Etapas para reproduzir o comportamento:
-1. Vá para '...'
-2. Clique em '....'
-3. Role para baixo até '....'
-4. Ver erro
-
-**Comportamento esperado**
-Uma descrição clara e concisa do que você esperava que acontecesse.
-
-**Capturas de tela**
-Se aplicável, adicione capturas de tela para ajudar a explicar seu problema.
-
-**Desktop (preencha as seguintes informações):**
-  - SO: [por exemplo iOS]
-  - Navegador [por exemplo chrome, safari]
-  - Versão [por exemplo 22]
-
-**Smartphone (preencha as seguintes informações):**
-  - Dispositivo: [por exemplo iPhone6]
-  - SO: [por exemplo iOS8.1]
-  - Navegador [por exemplo navegador padrão, safari]
-  - Versão [por exemplo 22]
-
-**Contexto adicional**
-Adicione qualquer outro contexto sobre o problema aqui.
+- type: textarea
+  attributes:
+    label: Descrição do problema
+    description: Adicione uma descrição clara e concisa do problema que você deseja resolver com esta solicitação de recurso.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Solução Proposta
+    description: Descreva a solução que você deseja de forma clara e concisa.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Alternativas consideradas
+    description: Uma descrição clara e concisa de quaisquer soluções ou recursos alternativos que você considerou.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Informações adicionais
+    description: Adicione qualquer outro contexto sobre o problema aqui.
+  validations:
+    required: false
