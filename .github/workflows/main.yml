@@ -35,7 +35,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PRNUM: ${{ github.event.pull_request.number }}
         run: |
-          gh pr comment $PRNUM --body "PR is not linked to any issue, please make the corresponding changes in the body."
+          gh pr comment $PRNUM --body "❗PR não está vinculado a nenhuma issue, faça as alterações correspondentes no corpo.."
           gh pr edit $PRNUM --add-label "PR:No-Issue"
 
   validate-title-and-comment:
@@ -75,7 +75,7 @@ jobs:
         run: |
           AUTHOR_NAME=${{ github.event.pull_request.user.login }}
           cat <<EOT > message.txt
-          Olá $AUTHOR_NAME ! Parece que houve um problema com o seu PR 🧐 Aqui estão algumas coisas para verificar:
+          Olá $AUTHOR_NAME ! 🚫 Parece que houve um problema com o seu PR 🧐 Aqui estão algumas coisas para verificar:
 
           - Seu PR deve seguir a [convenção de commits](https://www.conventionalcommits.org/pt-br/v1.0.0-beta.4/).
 
