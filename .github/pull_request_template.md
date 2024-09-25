@@ -21,9 +21,7 @@
 - [ ] Vincular o pull request a uma issue usando palavra chave [Pull request vinculado a uma issue]
 
 <!--
-## Em casos de viculação do pr a uma issue, utilize o modelo de descrição abaixo:
-Closes #5
-Aqui estão todas as informações adicionais necessárias para o revisor, por exemplo, execute o Yarn antes de revisar.
+## Em casos de viculação do pr a uma issue, utilizar essa area para fechamento.
 -->
 
 ## Screenshots
