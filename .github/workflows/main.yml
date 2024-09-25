@@ -41,7 +41,7 @@ jobs:
   validate-title-and-comment:
     permissions: write-all
     runs-on: ubuntu-latest
-    needs: checker-pr-has-valid-issue
+    needs: validate-has-valid-issue
 
     steps:
 
