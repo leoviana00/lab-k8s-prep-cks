@@ -10,8 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      
+
+      - name: Checkout code from PR (Safe Checkout)
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Validate PR
+        uses: thehanimo/pr-title-checker@v1.4.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          remote_configuration_path: "https://raw.githubusercontent.com/leoviana00/lab-k8s-prep-cks/main/.github/pr-title-checker-config.json"
+
+      # - uses: actions/checkout@v2
+
       - name: Issue Validator
         uses: HarshCasper/validate-issues-over-pull-requests@v0.1.1
         id: validator
