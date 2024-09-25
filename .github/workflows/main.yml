@@ -5,24 +5,13 @@ on:
     types: [ edited, synchronize, opened, reopened ]
 
 jobs:
-  checker:
+  checker-pr-has-valid-issue:
     permissions: write-all
     runs-on: ubuntu-latest
 
     steps:
 
-      - name: Checkout code from PR (Safe Checkout)
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-
-      - name: Validate PR
-        uses: thehanimo/pr-title-checker@v1.4.1
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          remote_configuration_path: "https://raw.githubusercontent.com/leoviana00/lab-k8s-prep-cks/main/.github/pr-title-checker-config.json"
-
-      # - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Issue Validator
         uses: HarshCasper/validate-issues-over-pull-requests@v0.1.1
@@ -48,3 +37,51 @@ jobs:
         run: |
           gh pr comment $PRNUM --body "PR is not linked to any issue, please make the corresponding changes in the body."
           gh pr edit $PRNUM --add-label "PR:No-Issue"
+
+  validate-and-comment:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    needs: checker-pr-has-valid-issue
+
+    steps:
+
+      - name: Checkout code from PR (Safe Checkout)
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Validate PR
+        uses: thehanimo/pr-title-checker@v1.4.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          remote_configuration_path: "https://raw.githubusercontent.com/leoviana00/lab-k8s-prep-cks/main/.github/pr-title-checker-config.json"
+
+      - name: Comment PR on Success and Add Label 
+        if: success()
+        run: |
+          AUTHOR_NAME=${{ github.event.pull_request.user.login }}
+          cat <<EOT > message.txt
+          Aí sim hein $AUTHOR_NAME ! Seu PR foi aprovado 🥳 
+          Faremos o merge aqui em breve. Muito obrigado pela contribuição 🚀
+          EOT
+
+          gh pr comment ${{ github.event.pull_request.number }} --body-file=message.txt
+          gh pr edit ${{ github.event.pull_request.number }} --add-label "PR:Is-valid"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Comment PR on Failure
+        if: failure()
+        run: |
+          AUTHOR_NAME=${{ github.event.pull_request.user.login }}
+          cat <<EOT > message.txt
+          Olá $AUTHOR_NAME ! Parece que houve um problema com o seu PR 🧐 Aqui estão algumas coisas para verificar:
+
+          - Seu PR deve seguir a [convenção de commits](https://www.conventionalcommits.org/pt-br/v1.0.0-beta.4/).
+
+          Agradecemos sua contribuição e compreensão 👊😉
+          EOT
+
+          gh pr comment ${{ github.event.pull_request.number }} --body-file=message.txt
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
